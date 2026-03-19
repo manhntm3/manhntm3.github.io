@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>martinnguyen.me | System Root</title>
+    <style>
+        :root {
+            --bg: #0d1117;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --low-level: #7ee787; /* Green for C++/CUDA */
+            --dim: #484f58;
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+
+        .terminal {
+            max-width: 800px;
+            width: 100%;
+            border: 1px solid var(--dim);
+            border-radius: 6px;
+            padding: 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .header { border-bottom: 1px solid var(--dim); padding-bottom: 10px; margin-bottom: 20px; }
+        .prompt { color: var(--accent); font-weight: bold; }
+        .command { color: var(--text); margin-left: 10px; }
+        
+        h1 { font-size: 1.5rem; margin: 0; color: var(--accent); }
+        h2 { font-size: 1.1rem; color: var(--low-level); margin-top: 30px; }
+        
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 10px; }
+        .card { border: 1px solid var(--dim); padding: 15px; border-radius: 4px; transition: 0.3s; }
+        .card:hover { border-color: var(--accent); background: #161b22; }
+
+        .stat { color: var(--low-level); font-weight: bold; }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="terminal">
+    <div class="header">
+        <h1>martinnguyen.me [Version 1.0.0]</h1>
+        <p style="color: var(--dim);">System initialized. Location: UIC, Chicago.</p>
+    </div>
+
+    <p><span class="prompt">guest@martin:~$</span> <span class="command">whoami</span></p>
+    <p>
+        I'm a CS student at UIC focused on <strong>low-level systems, GPU programming, and AI</strong>. 
+        Currently optimizing Transformer kernels and building high-performance serving engines.
+    </p>
+
+    <h2>[ Active_Processes ]</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="stat">RUNNING</div>
+            <strong>Transformer Serving Engine</strong>
+            <p style="font-size: 0.8rem;">Custom PagedAttention kernels using Triton & CUDA.</p>
+        </div>
+        <div class="card">
+            <div class="stat">PENDING</div>
+            <strong>CS 533 Project</strong>
+            <p style="font-size: 0.8rem;">Model calibration in sentiment & emotion classification.</p>
+        </div>
+    </div>
+
+    <h2>[ Tech_Stack ]</h2>
+    <p>
+        > Languages: <span style="color: var(--low-level);">C++, Python, CUDA</span><br>
+        > Tools: <span style="color: var(--low-level);">Triton, gRPC, Git</span><br>
+        > Philosophy: <span style="color: var(--low-level);">Confucianism & Dostoevsky</span>
+    </p>
+
+    <h2>[ Network_Links ]</h2>
+    <ul>
+        <li>GitHub: <a href="https://github.com/manhntm3">github.com/manhntm3</a></li>
+        <li>Contact: <a href="mailto:mnguy104@uic.edu">mnguy104@uic.edu</a></li>
+    </ul>
+
+    <p style="margin-top: 40px;"><span class="prompt">guest@martin:~$</span> <span class="command" id="cursor">█</span></p>
+</div>
+
+<script>
+    // Simple blinking cursor effect
+    setInterval(() => {
+        const cursor = document.getElementById('cursor');
+        cursor.style.opacity = cursor.style.opacity == 0 ? 1 : 0;
+    }, 600);
+</script>
+
+</body>
+</html>
