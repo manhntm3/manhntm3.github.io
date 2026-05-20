@@ -1,0 +1,35 @@
+{
+  "name": "martinnguyen-me",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "^15.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "gray-matter": "^4.0.3",
+    "remark": "^15.0.1",
+    "remark-gfm": "^4.0.0",
+    "remark-rehype": "^11.1.1",
+    "rehype-pretty-code": "^0.14.0",
+    "rehype-stringify": "^10.0.1",
+    "rehype-slug": "^6.0.0",
+    "shiki": "^1.24.0",
+    "unified": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
+    "@webgpu/types": "^0.1.69",
+    "typescript": "^5.7.3",
+    "tailwindcss": "^4.0.0",
+    "@tailwindcss/postcss": "^4.0.0",
+    "postcss": "^8.5.1"
+  }
+}
