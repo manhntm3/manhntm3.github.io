@@ -168,10 +168,10 @@ export class BlackHoleRenderer {
         this.setStatus("Loading stars texture...");
 
         try {
-            const response = await fetch("/stars.png");
+            const response = await fetch("/galaxy.jpg");
 
             if (!response.ok) {
-                throw new Error("stars.png not found");
+                throw new Error("galaxy.jpg not found");
             }
 
             const blob = await response.blob();
